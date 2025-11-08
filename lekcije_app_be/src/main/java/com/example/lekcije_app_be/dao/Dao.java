@@ -1,4 +1,4 @@
-package com.example.vaja1be.dao;
+package com.example.lekcije_app_be.dao;
 
 import java.util.List;
 

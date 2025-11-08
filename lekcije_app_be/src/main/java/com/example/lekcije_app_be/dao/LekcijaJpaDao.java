@@ -1,6 +1,6 @@
-package com.example.vaja1be.dao;
+package com.example.lekcije_app_be.dao;
 
-import com.example.vaja1be.vao.Lekcija;
+import com.example.lekcije_app_be.vao.Lekcija;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

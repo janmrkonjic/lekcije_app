@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>vaja1-be</artifactId>
+    <artifactId>lekcije_app_be</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>vaja1-be</name>
-    <description>vaja1-be</description>
+    <name>lekcije_app_be</name>
+    <description>lekcije_app_be</description>
     <url/>
     <licenses>
         <license/>
@@ -83,6 +83,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <mainClass>com.example.lekcije_app_be.LekcijeAppBeApplication</mainClass>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>

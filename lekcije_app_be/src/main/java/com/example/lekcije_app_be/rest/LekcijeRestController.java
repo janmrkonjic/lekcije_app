@@ -1,7 +1,7 @@
-package com.example.vaja1be.rest;
+package com.example.lekcije_app_be.rest;
 
-import com.example.vaja1be.dao.LekcijaJpaDao;
-import com.example.vaja1be.vao.Lekcija;
+import com.example.lekcije_app_be.dao.LekcijaJpaDao;
+import com.example.lekcije_app_be.vao.Lekcija;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.example.vaja1be.vao;
+package com.example.lekcije_app_be.vao;
 
 import jakarta.persistence.*;
 
