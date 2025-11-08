@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preview</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial; margin: 0; padding: 16px; background: #f6f7fb; }
+      .container { max-width: 900px; margin: 24px auto; background: white; padding: 16px; border-radius: 8px; box-shadow: 0 6px 18px rgba(20,24,40,0.06); }
+      .back { display: inline-block; margin-bottom: 12px; color: #1b6fff; text-decoration: none; }
+      .meta { margin-bottom: 12px; }
+      iframe { width: 100%; height: 520px; border: none; border-radius: 6px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a class="back" href="/">← Nazaj</a>
+      <div id="meta" class="meta"></div>
+      <div id="player"></div>
+    </div>
+
+    <script>
+      function getQueryParam(name) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(name);
+      }
+
+      const yt = getQueryParam('yt');
+      const title = getQueryParam('title');
+      const desc = getQueryParam('desc');
+      const metaEl = document.getElementById('meta');
+      const playerEl = document.getElementById('player');
+
+      if (title) {
+        const h = document.createElement('h2');
+        h.textContent = title;
+        metaEl.appendChild(h);
+      }
+      if (desc) {
+        const p = document.createElement('p');
+        p.textContent = desc;
+        metaEl.appendChild(p);
+      }
+
+      if (!yt) {
+        const p = document.createElement('p');
+        p.textContent = 'Ni podanega video URL-a.';
+        playerEl.appendChild(p);
+      } else {
+        // show yt below
+        const info = document.createElement('div');
+        info.textContent = 'Video predogled za: ' + yt;
+        metaEl.appendChild(info);
+        // If the URL is a youtube link, try to extract the video id
+        const url = yt;
+        let videoId = null;
+        try {
+          const u = new URL(url);
+          if (u.hostname.includes('youtube.com')) {
+            videoId = u.searchParams.get('v');
+          } else if (u.hostname.includes('youtu.be')) {
+            videoId = u.pathname.slice(1);
+          }
+        } catch (e) {
+          // not a full URL, maybe it's already an ID
+          videoId = url;
+        }
+
+        if (videoId) {
+          const embed = document.createElement('iframe');
+          embed.src = 'https://www.youtube.com/embed/' + encodeURIComponent(videoId) + '?rel=0';
+          embed.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          playerEl.appendChild(embed);
+        } else {
+          // fallback: show link
+          const a = document.createElement('a');
+          a.href = yt;
+          a.textContent = yt;
+          a.target = '_blank';
+          playerEl.appendChild(a);
+        }
+      }
+    </script>
+  </body>
+</html>
