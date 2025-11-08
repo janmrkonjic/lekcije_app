@@ -51,21 +51,21 @@ lekcije_app/
 │   ├── src/
 │   │   ├── main/
 │   │   │   ├── java/
-│   │   │   │   └── com/example/vaja1be/
-│   │   │   │       ├── Vaja1BeApplication.java    # Glavna aplikacijska točka
-│   │   │   │       ├── dao/                       # Data Access Objects
-│   │   │   │       │   ├── Dao.java               # Generični DAO vmesnik
-│   │   │   │       │   ├── LekcijaDao.java        # DAO vmesnik za lekcije
-│   │   │   │       │   └── LekcijaJpaDao.java     # JPA implementacija
-│   │   │   │       ├── rest/                      # REST kontrolerji
+│   │   │   │   └── com/example/lekcije_app_be/
+│   │   │   │       ├── LekcijeAppBeApplication.java    # Glavna aplikacijska točka
+│   │   │   │       ├── dao/                            # Data Access Objects
+│   │   │   │       │   ├── Dao.java                    # Generični DAO vmesnik
+│   │   │   │       │   ├── LekcijaDao.java             # DAO vmesnik za lekcije
+│   │   │   │       │   └── LekcijaJpaDao.java          # JPA implementacija
+│   │   │   │       ├── rest/                           # REST kontrolerji
 │   │   │   │       │   └── LekcijeRestController.java
-│   │   │   │       └── vao/                       # Value Access Objects (entitete)
-│   │   │   │           └── Lekcija.java           # JPA entiteta Lekcija
+│   │   │   │       └── vao/                            # Value Access Objects (entitete)
+│   │   │   │           └── Lekcija.java                # JPA entiteta Lekcija
 │   │   │   └── resources/
-│   │   │       └── application.properties         # Konfiguracija aplikacije
-│   │   └── test/                                  # Unit testi
-│   ├── pom.xml                                    # Maven konfiguracija
-│   └── mvnw, mvnw.cmd                            # Maven wrapper
+│   │   │       └── application.properties              # Konfiguracija aplikacije
+│   │   └── test/                                       # Unit testi
+│   ├── pom.xml                                         # Maven konfiguracija
+│   └── mvnw, mvnw.cmd                                  # Maven wrapper
 │
 ├── lekcije_app_fe/                 # Frontend (React + TypeScript)
 │   ├── src/
