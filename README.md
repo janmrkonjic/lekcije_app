@@ -149,8 +149,8 @@ Ustvarite MySQL podatkovno bazo:
 
 ```sql
 CREATE DATABASE lekcije_db;
-CREATE USER 'lekcije_user'@'localhost' IDENTIFIED BY 'lekcije_pass';
-GRANT ALL PRIVILEGES ON lekcije_db.* TO 'lekcije_user'@'localhost';
+CREATE USER 'lekcije_user'@'%' IDENTIFIED BY 'lekcije_pass';
+GRANT ALL PRIVILEGES ON lekcije_db.* TO 'lekcije_user'@'%';
 FLUSH PRIVILEGES;
 ```
 
@@ -165,6 +165,7 @@ spring.datasource.username=lekcije_user
 spring.datasource.password=lekcije_pass
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 ```
 
 ### 4. Zagon backenda
