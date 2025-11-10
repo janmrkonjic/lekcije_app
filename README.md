@@ -1,8 +1,8 @@
-# 📚 Lekcije App
+# Lekcije App
 
 Spletna aplikacija za upravljanje kratkih 5-minutnih video lekcij. Aplikacija omogoča pregledovanje, dodajanje, urejanje in brisanje lekcij z YouTube povezavami.
 
-## 📋 Kazalo
+## Kazalo
 
 - [O projektu](#-o-projektu)
 - [Funkcionalnosti](#-funkcionalnosti)
@@ -15,19 +15,19 @@ Spletna aplikacija za upravljanje kratkih 5-minutnih video lekcij. Aplikacija om
 
 ---
 
-## 🎯 O projektu
+## O projektu
 
 Lekcije App je full-stack aplikacija za upravljanje učnih vsebin. Uporabniki lahko dodajajo kratke lekcije s povezavami na YouTube videoposnetke, jih urejajo, brišejo in pregledujejo. Aplikacija je razdeljena na backend (REST API) in frontend (React SPA).
 
-## ✨ Funkcionalnosti
+## Funkcionalnosti
 
-- 📝 **CRUD operacije**: Ustvarjanje, branje, posodabljanje in brisanje lekcij
-- 🔍 **Iskanje**: Iskanje lekcij po naslovu in opisu
-- 🎥 **YouTube integracija**: Predogled YouTube videoposnetkov
-- 📱 **Odziven dizajn**: Prilagojena uporabniška izkušnja za različne naprave
-- 🔄 **Real-time posodabljanje**: Dinamično osveževanje seznama lekcij
+- **CRUD operacije**: Ustvarjanje, branje, posodabljanje in brisanje lekcij
+- **Iskanje**: Iskanje lekcij po naslovu in opisu
+- **YouTube integracija**: Predogled YouTube videoposnetkov
+- **Odziven dizajn**: Prilagojena uporabniška izkušnja za različne naprave
+- **Real-time posodabljanje**: Dinamično osveževanje seznama lekcij
 
-## 🛠 Tehnologije
+## Tehnologije
 
 ### Backend
 - **Java 25**
@@ -43,7 +43,7 @@ Lekcije App je full-stack aplikacija za upravljanje učnih vsebin. Uporabniki la
 - **React Router DOM 7.9.4** - Usmerjanje v aplikaciji
 - **CSS3** - Stilizacija
 
-## 📂 Struktura projekta
+## Struktura projekta
 
 ```
 lekcije_app/
@@ -126,7 +126,7 @@ lekcije_app/
                     └─────────┘
 ```
 
-## 🚀 Navodila za nameščanje
+## Navodila za nameščanje
 
 ### Predpogoji
 
@@ -195,7 +195,7 @@ npm run dev
 
 Frontend bo dostopen na: `http://localhost:5173`
 
-## 👨‍💻 Navodila za razvijalce
+## Navodila za razvijalce
 
 ### Prispevanje k projektu
 
@@ -324,7 +324,7 @@ Content-Type: application/json
 DELETE /api/lekcije/{id}
 ```
 
-## 📜 Standardi kodiranja
+## Standardi kodiranja
 
 ### Java (Backend)
 
