@@ -13,6 +13,8 @@ Spletna aplikacija za upravljanje kratkih 5-minutnih video lekcij. Aplikacija om
 - [API Dokumentacija](#-api-dokumentacija)
 - [DPU](#-diagram-primerov-uporabe)
 - [Standardi kodiranja](#-standardi-kodiranja)
+- [Besednjak](#besednjak)
+- [Vizija projekta](#vizija-projekta)
 
 ---
 
@@ -340,3 +342,16 @@ DELETE /api/lekcije/{id}
 | **Brisanje lekcij** | Admin lahko trajno izbriše katerokoli lekcijo iz sistema. |
 | **Brisanje uporabnikov** | Admin lahko odstrani kateregakoli uporabnika iz sistema. |
 | **Opomin preko e-pošte** | Sistem pošlje opomnik uporabniku, če je bila njegova lekcija potrjena/zavrnjena, če še ni rešil daily lekcije in adminu, če nekdo želi objaviti svojo lekcijo in je potrebna potrditev/zavrnitev iz njegove strani. |
+
+## Vizija projekta
+
+Spletna informacijska rešitev je zasnovana kot platforma za hitro učenje. Uporabniku ponuja kratke, jedrnate članke, ki jih lahko prebere v približno petih minutah, nato pa svoje razumevanje preveri s kratkim kvizom. 
+
+Cilji aplikacije so:
+- omogočiti hitro in dostopno učenje v kratkih časovnih intervalih,
+- spodbujati sprotno preverjanje znanja,
+- uporabnikom ponuditi jasen pregled njihovega napredka,
+- ustvariti enostavno, pregledno in motivacijsko okolje za učenje,
+- zagotoviti preprosto urejanje, dodajanje in organizacijo člankov ter kvizov.
+
+Aplikacija je namenjena začetnikom in izkušenim uporabnikom, ki želijo utrditi ali nadgraditi svoje znanje. Z jedrnatimi lekcijami, kratkimi kvizi in preglednim sistemom točkovanja želimo ustvariti učno izkušnjo, ki spodbuja redno učenje in jasno prikazuje napredek. Uporabnikom so na voljo tudi dnevne lekcije (“daily”), ki dodatno motivirajo k učenju in ohranjajo učne navade.
