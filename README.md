@@ -261,7 +261,7 @@ npm run preview
 | opis    | TEXT         | Opis lekcije                  |
 | yt_url  | VARCHAR(255) | YouTube URL                   |
 
-## 📡 API Dokumentacija
+## API Dokumentacija
 
 ### Osnovna URL
 ```
@@ -350,3 +350,25 @@ DELETE /api/lekcije/{id}
 - **Komponente**: Uporabljamo funkcijske komponente s hooks
 - **Tipizacija**: Vedno uporabljamo TypeScript tipe in vmesnike
 - **Styling**: CSS module ali inline styles
+
+
+## Besednjak
+
+| Izraz | Razlaga |
+|-------|---------|
+| **Lekcija** | Kratka lekcija sestavljena iz besedila, ki ga uporabnik prebere v približno 5 minutah in kviza, ki ga uporabnik reši da potrdi svoje znanje o novo osvojeni lekciji. |
+| **Kviz** | Kviz na koncu lekcije, ki je sestavljen iz 3 vprašanj, vsako vprašanje pa ima 4 možne odgovore, od katerih je en pravilen. |
+| **Opravljanje lekcije** | Uporabnik uspešno opravi lekcijo, če odgovori pravilno na vsa 3 vprašanja na kvizu. |
+| **Dodajanje lekcije** | Prijavljen uporabnik lahko ustvari novo lekcijo z vnosom naslova, vsebine in kviza, ki ga sam ustvari. |
+| **Submittanje lekcije za approval** | Pošiljanje lekcije v pregled, da jo admin potrdi (objavi) ali zavrne. |
+| **Approval lekcije** | Če admin potrdi lekcijo, postane vidna vsem uporabnikom. |
+| **Ocenjevanje lekcij** | Prijavljen uporabnik lahko oceni lekcijo z zvezdicami. |
+| **Reševanje daily lekcije** | Vsak dan se uporabniku prikaže neka naključno izbrana lekcija, katero lahko reši in povečuje svoj "daily streak". |
+| **Iskanje lekcij** | Uporabnik lahko lekcije išče  po naslovu, avtorju,... |
+| **Filtriranje lekcij** | Uporabnik lahko lekcije filtrira glede na avtorja, tematiko, oceno, opravljenost,... |
+| **Pregled lekcij** | Prikaz osnovnih informacij o vseh lekcijah (lahko so to vse objavljene lekcije ali pa vse lekcije, ki jih je ustvaril nek uporabnik in so lahko objavljene ali pa ne). |
+| **Ogled lekcije** | Prikaz celotne lekcije z naslovom, vsebino in kvizom. |
+| **Urejanje/brisanje uporabnikovih unpublished lekcij** | Prijavljen uporabnik lahko ureja in briše svoje lekcije, ki še niso bile objavljene. Ko je lekcija enkrat objavljena to ni več mogoče. |
+| **Brisanje lekcij** | Admin lahko trajno izbriše katerokoli lekcijo iz sistema. |
+| **Brisanje uporabnikov** | Admin lahko odstrani kateregakoli uporabnika iz sistema. |
+| **Opomin preko e-pošte** | Sistem pošlje opomnik uporabniku, če je bila njegova lekcija potrjena/zavrnjena, če še ni rešil daily lekcije in adminu, če nekdo želi objaviti svojo lekcijo in je potrebna potrditev/zavrnitev iz njegove strani. |
