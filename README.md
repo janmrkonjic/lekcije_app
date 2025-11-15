@@ -11,6 +11,7 @@ Spletna aplikacija za upravljanje kratkih 5-minutnih video lekcij. Aplikacija om
 - [Navodila za nameščanje](#-navodila-za-nameščanje)
 - [Navodila za razvijalce](#-navodila-za-razvijalce)
 - [API Dokumentacija](#-api-dokumentacija)
+- [DPU](#-diagram-primerov-uporabe)
 - [Standardi kodiranja](#-standardi-kodiranja)
 
 ---
@@ -30,6 +31,7 @@ Lekcije App je full-stack aplikacija za upravljanje učnih vsebin. Uporabniki la
 ## Tehnologije
 
 ### Backend
+
 - **Java 25**
 - **Spring Boot 3.5.6**
 - **Spring Data JPA** - ORM za delo s podatkovno bazo
@@ -37,6 +39,7 @@ Lekcije App je full-stack aplikacija za upravljanje učnih vsebin. Uporabniki la
 - **Maven** - Upravljanje odvisnosti
 
 ### Frontend
+
 - **React 19.1.1** - JavaScript knjižnica za uporabniški vmesnik
 - **TypeScript 5.9.3** - Tipiziran JavaScript
 - **Vite 7.1.7** - Build orodje in razvojni strežnik
@@ -87,50 +90,12 @@ lekcije_app/
 └── README.md                                      # Ta datoteka
 ```
 
-### Diagram arhitekture
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                      Frontend (React)                    │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │
-│  │  LessonList  │  │ AddEditLesson│  │LessonPreview │  │
-│  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘  │
-│         │                 │                  │           │
-│         └─────────────────┴──────────────────┘           │
-│                           │                              │
-│                      ┌────▼────┐                         │
-│                      │  api.ts │                         │
-│                      └────┬────┘                         │
-└───────────────────────────┼──────────────────────────────┘
-                            │ HTTP REST API
-                            │ (localhost:8080/api/lekcije)
-┌───────────────────────────▼──────────────────────────────┐
-│                   Backend (Spring Boot)                   │
-│  ┌────────────────────────────────────────────────────┐  │
-│  │       LekcijeRestController (@RestController)      │  │
-│  └─────────────────────┬──────────────────────────────┘  │
-│                        │                                  │
-│  ┌─────────────────────▼──────────────────────────────┐  │
-│  │      LekcijaJpaDao (Spring Data JPA)              │  │
-│  └─────────────────────┬──────────────────────────────┘  │
-│                        │                                  │
-│  ┌─────────────────────▼──────────────────────────────┐  │
-│  │          Lekcija (@Entity)                        │  │
-│  └─────────────────────┬──────────────────────────────┘  │
-└────────────────────────┼─────────────────────────────────┘
-                         │ JDBC
-                         │
-                    ┌────▼────┐
-                    │  MySQL  │
-                    │   DB    │
-                    └─────────┘
-```
-
 ## Navodila za nameščanje
 
 ### Predpogoji
 
 Preden začnete, se prepričajte, da imate nameščeno:
+
 - **Java JDK 17+** ([Prenesi](https://www.oracle.com/java/technologies/downloads/))
 - **Node.js 18+** in **npm** ([Prenesi](https://nodejs.org/))
 - **MySQL 8.0+** ([Prenesi](https://dev.mysql.com/downloads/mysql/))
@@ -171,12 +136,14 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 ### 4. Zagon backenda
 
 #### Windows (PowerShell):
+
 ```powershell
 cd lekcije_app_be
 .\mvnw.cmd spring-boot:run
 ```
 
 #### Linux/Mac:
+
 ```bash
 cd lekcije_app_be
 ./mvnw spring-boot:run
@@ -226,12 +193,6 @@ Frontend bo dostopen na: `http://localhost:5173`
 
 # Build projekta
 ./mvnw clean install
-
-# Zagon testov
-./mvnw test
-
-# Preverjanje kode (formatting)
-./mvnw spotless:check
 ```
 
 #### Frontend razvojni ukazi:
@@ -242,28 +203,23 @@ npm run dev
 
 # Build za produkcijo
 npm run build
-
-# Preverjanje kode (linting)
-npm run lint
-
-# Predogled produkcijske verzije
-npm run preview
 ```
 
 ### Struktura podatkovne baze
 
 **Tabela: `lekcija`**
 
-| Stolpec | Tip          | Opis                          |
-|---------|--------------|-------------------------------|
-| id      | BIGINT (PK)  | Primarni ključ (auto-increment)|
-| naziv   | VARCHAR(255) | Naslov lekcije                |
-| opis    | TEXT         | Opis lekcije                  |
-| yt_url  | VARCHAR(255) | YouTube URL                   |
+| Stolpec | Tip          | Opis                            |
+| ------- | ------------ | ------------------------------- |
+| id      | BIGINT (PK)  | Primarni ključ (auto-increment) |
+| naziv   | VARCHAR(255) | Naslov lekcije                  |
+| opis    | TEXT         | Opis lekcije                    |
+| yt_url  | VARCHAR(255) | YouTube URL                     |
 
 ## API Dokumentacija
 
 ### Osnovna URL
+
 ```
 http://localhost:8080/api/lekcije
 ```
@@ -271,10 +227,13 @@ http://localhost:8080/api/lekcije
 ### Endpoints
 
 #### 1. Pridobi vse lekcije
+
 ```
 GET /api/lekcije
 ```
+
 **Odgovor:**
+
 ```json
 [
   {
@@ -287,16 +246,19 @@ GET /api/lekcije
 ```
 
 #### 2. Pridobi lekcijo po ID
+
 ```
 GET /api/lekcije/{id}
 ```
 
 #### 3. Išči lekcije
+
 ```
 GET /api/lekcije/search?q=java
 ```
 
 #### 4. Ustvari novo lekcijo
+
 ```
 POST /api/lekcije
 Content-Type: application/json
@@ -309,6 +271,7 @@ Content-Type: application/json
 ```
 
 #### 5. Posodobi lekcijo
+
 ```
 PUT /api/lekcije/{id}
 Content-Type: application/json
@@ -321,9 +284,14 @@ Content-Type: application/json
 ```
 
 #### 6. Izbriši lekcijo
+
 ```
 DELETE /api/lekcije/{id}
 ```
+
+## Diagram Primerov Uporabe
+
+![alt text](https://github.com/janmrkonjic/lekcije_app/blob/main/dokumentacija/dpu.png "Diagram primerov uporabe")
 
 ## Standardi kodiranja
 
