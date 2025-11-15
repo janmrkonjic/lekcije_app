@@ -4,15 +4,15 @@ Spletna aplikacija za upravljanje kratkih 5-minutnih video lekcij. Aplikacija om
 
 ## Kazalo
 
-- [O projektu](#-o-projektu)
-- [Funkcionalnosti](#-funkcionalnosti)
-- [Tehnologije](#-tehnologije)
-- [Struktura projekta](#-struktura-projekta)
-- [Navodila za nameščanje](#-navodila-za-nameščanje)
-- [Navodila za razvijalce](#-navodila-za-razvijalce)
-- [API Dokumentacija](#-api-dokumentacija)
-- [DPU](#-diagram-primerov-uporabe)
-- [Standardi kodiranja](#-standardi-kodiranja)
+- [O projektu](#o-projektu)
+- [Funkcionalnosti](#funkcionalnosti)
+- [Tehnologije](#tehnologije)
+- [Struktura projekta](#struktura-projekta)
+- [Navodila za nameščanje](#navodila-za-nameščanje)
+- [Navodila za razvijalce](#navodila-za-razvijalce)
+- [API Dokumentacija](#api-dokumentacija)
+- [DPU](#diagram-primerov-uporabe)
+- [Standardi kodiranja](#standardi-kodiranja)
 - [Besednjak](#besednjak)
 - [Vizija projekta](#vizija-projekta)
 
