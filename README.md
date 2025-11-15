@@ -345,7 +345,7 @@ DELETE /api/lekcije/{id}
 
 ## Vizija projekta
 
-Spletna informacijska rešitev je zasnovana kot platforma za hitro učenje. Uporabniku ponuja kratke, jedrnate članke, ki jih lahko prebere v približno petih minutah, nato pa svoje razumevanje preveri s kratkim kvizom. 
+Spletna informacijska rešitev je zasnovana kot platforma za hitro učenje. Uporabniku ponuja kratke, jedrnate članke, ki jih lahko prebere v približno petih minutah, nato pa svoje razumevanje preveri s kratkim kvizom. S tem želimo omogočiti hitrejše in učinkovitejše učenje brez preobremenitve z obsežnimi vsebinami.
 
 Cilji aplikacije so:
 - omogočiti hitro in dostopno učenje v kratkih časovnih intervalih,
@@ -354,4 +354,5 @@ Cilji aplikacije so:
 - ustvariti enostavno, pregledno in motivacijsko okolje za učenje,
 - zagotoviti preprosto urejanje, dodajanje in organizacijo člankov ter kvizov.
 
-Aplikacija je namenjena začetnikom in izkušenim uporabnikom, ki želijo utrditi ali nadgraditi svoje znanje. Z jedrnatimi lekcijami, kratkimi kvizi in preglednim sistemom točkovanja želimo ustvariti učno izkušnjo, ki spodbuja redno učenje in jasno prikazuje napredek. Uporabnikom so na voljo tudi dnevne lekcije (“daily”), ki dodatno motivirajo k učenju in ohranjajo učne navade.
+Aplikacija je namenjena tako začetnikom kot posameznikom, ki želijo utrditi znanje in ga redno preverjati. Z jedrnatimi članki, kratkimi kvizi in preglednim sistemom točkovanja želimo ustvariti učno izkušnjo, ki spodbuja redno učenje in jasno prikazuje napredek uporabnika. Poleg tega ima vsak uporabnik na voljo dnevne lekcije in kvize, ki jih lahko reši za dodatno motivacijo ter vzdrževanje stalne učne rutine.
+
